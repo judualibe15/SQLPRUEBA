@@ -53,17 +53,6 @@ constraint pk_Ejemplar primary key (idEjem),
 constraint fk_Ejemplar foreign key (CodLibro) references Libro (CodLibro)
 )engine=innodb;
 
-create table Prestamo(
-NPrestamo int auto_increment ,
-CodSocio int,
-FPrestamo date,
-FDevolucion date,
-FTope date,
-constraint pk_prestamo primary key (NPrestamo),
-constraint fk_prestamo_S foreign key (CodSocio) references Socio(CodSocio)
-)engine=innodb;
-
-
 create table DetallePre(
 NPrestamo int, 
 idEjem int,
