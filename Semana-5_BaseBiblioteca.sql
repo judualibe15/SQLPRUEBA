@@ -43,15 +43,7 @@ constraint fk_LibroAutor_A foreign key (CodAutor) references Autor (CodAutor)
 )engine=innodb;
 
  
-create table Ejemplar(
-idEjem int auto_increment,
-CodLibro int,
-NEjemplar int,
-Deteriorado boolean,
-Prestado boolean,
-constraint pk_Ejemplar primary key (idEjem),
-constraint fk_Ejemplar foreign key (CodLibro) references Libro (CodLibro)
-)engine=innodb;
+
 
 create table DetallePre(
 NPrestamo int, 
